@@ -1,0 +1,65 @@
+<main>
+  <nav>
+    <div class="left">
+      <div class="logo">
+        <img src="assets/images/logo.svg" />
+      </div>
+      <h1>TaskMate</h1>
+    </div>
+    <div class="right" routerLink="/" (click)="logout()">
+      <img src="assets/images/exit.svg" />
+    </div>
+  </nav>
+  <section>
+    <div class="statistics">
+      <div class="stat-item">
+        <div class="stat-title">
+          <h3>Completed</h3>
+        </div>
+        <p>{{ finishedTasks.length }}</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-title">
+          <h3>Pending Today</h3>
+        </div>
+        <p>{{ todaysTasks.length }}</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-title">
+          <h3>Total Today</h3>
+        </div>
+        <p>{{ todaysTasks.length + finishedTasks.length }}</p>
+      </div>
+    </div>
+    <div class="tasks-today">
+      <div class="title">
+        <h2>Today</h2>
+        <p>{{ dateToday | date }}</p>
+      </div>
+      <div class="task-list">
+        <div class="no-tasks" *ngIf="todaysTasks == ''">
+          <h2>No tasks for today</h2>
+        </div>
+        <app-task-item
+        *ngFor="let task of todaysTasks; let i = index"
+          [dltIndex]="i"
+          [task]="task"
+          (tskCompleteEvent)="getDatas()"
+        ></app-task-item>
+      </div>
+      <div class="title completd-list">
+        <h2>Completed Today</h2>
+      </div>
+      <div class="finished-list">
+        <div class="no-tasks" *ngIf="finishedTasks == ''">
+          <h2>No tasks completed today</h2>
+        </div>
+        <app-task-finished
+          *ngFor="let task of finishedTasks"
+          [finished]="task"
+          (incompleteEvent)="getDatas()"
+        ></app-task-finished>
+      </div>
+    </div>
+  </section>
+</main>

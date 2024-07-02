@@ -1,0 +1,164 @@
+main,
+nav,
+.title,
+.left,
+.right,
+.statistics,
+.stat-item,
+.task-list,
+.finished-list,
+.no-tasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  color: #fff;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #86b3f7;
+}
+
+nav {
+  width: 100%;
+  padding: 10px 10px 0;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.right {
+  width: 50px;
+  height: 50px;
+}
+
+.right img {
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  padding: 0 10px;
+  font-size: 0.8rem;
+}
+
+.title {
+  justify-content: flex-start;
+}
+
+.title p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #b8b8b8;
+}
+
+.statistics {
+  gap: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  justify-content: flex-start;
+}
+
+.stat-item {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  max-width: 150px;
+  border-radius: 10px;
+  flex-direction: column;
+  background: #43546d;
+  justify-content: flex-start;
+}
+
+.stat-title {
+  width: 100%;
+  text-align: left;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+
+.stat-item p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.tasks-today {
+  padding-bottom: 100px;
+}
+
+.task-list {
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+  justify-content: flex-start;
+}
+
+.finished-list {
+  gap: 20px;
+  width: 100%;
+  padding: 20px 10px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+app-task-finished {
+  width: 100%;
+}
+
+.no-tasks {
+  opacity: 0.6;
+  width: 300px;
+  height: 80px;
+  border-radius: 6px;
+  background: #43546d;
+}
+
+@media only screen and (max-width: 1000px) {
+  app-task-item,
+  app-task-finished {
+    width: 100%;
+  }
+  .completd-list {
+    max-width: unset;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .task-list {
+    flex-wrap: unset;
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+
+  .completd-list {
+    width: 100%;
+  }
+
+  .no-tasks {
+    width: 100%;
+  }
+
+  .task-list::-webkit-scrollbar {
+    height: 10px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: #43546d;
+  border-radius: 6px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+  background: #7daef8;
+}
+}

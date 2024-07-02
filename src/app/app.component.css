@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+    width: 100%;
+}
+
+.main {
+  gap: 10px;
+  padding: 10px;
+  flex-direction: column;
+}

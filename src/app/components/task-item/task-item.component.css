@@ -1,0 +1,75 @@
+.task-item,
+.date,
+.actions,
+.tsk-hd,
+.star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-item {
+    gap: 20px;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 10px;
+    align-items: flex-start;
+    flex-direction: column;
+    background: #43546d;
+}
+
+.tsk-hd {
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.date {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.complt img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.actions {
+    gap: 20px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.actions img {
+    cursor: pointer;
+}
+
+.updated {
+    color: #a7c9fc;
+}
+
+.star {
+    width: 100%;
+    margin-right: 10px;
+    justify-content: flex-end;
+}
+
+.star img {
+    width: 40px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .task-item {
+        max-width: unset;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .task-item {
+        min-height: 160px;
+    }
+
+}

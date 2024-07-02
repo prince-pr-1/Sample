@@ -1,0 +1,41 @@
+<section>
+  <div class="title">
+    <h1>All Tasks</h1>
+    <div class="filter">
+      <select name="filter" [(ngModel)]="dropdown" (mouseup)="handleDropDown()">
+        <!-- <option value="">Filter</option> -->
+        <option value="all">All tasks</option>
+        <option value="week">Pending tasks of this week</option>
+        <option value="month">Pending tasks of this month</option>
+      </select>
+      <button (click)="handleBtnFilters('completed')">Completed</button>
+      <button (click)="handleBtnFilters('pending')">Pending</button>
+    </div>
+  </div>
+  <div class="tasks">
+    <div class="task-card" *ngFor="let task of filteredTasks">
+      <div class="lf">
+        <h3>{{ task.task | titlecase }}</h3>
+        <div class="dates">
+          <p class="date">
+            <img src="assets/images/due.svg" />{{ task.taskDate | date }}
+          </p>
+          <p>|</p>
+          <p class="date">
+            <img src="assets/images/updated.svg" />
+            Updated on {{ task.updatedDate | date }}
+          </p>
+        </div>
+      </div>
+      <div class="rt">
+        <p [ngClass]="task.status === 'pending' ? 'red' : 'green'">
+          {{ task.status | primaryCase }}
+        </p>
+      </div>
+    </div>
+
+    <div class="notasks" *ngIf="filteredTasks.length == 0">
+      <h4>No tasks to display</h4>
+    </div>
+  </div>
+</section>

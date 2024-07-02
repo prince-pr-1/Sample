@@ -1,0 +1,23 @@
+<nav>
+  <div
+    class="btn-holder"
+    [ngClass]="{ active: active === 'home' }"
+    routerLink="/dashboard"
+    (click)="setActive('home')"
+  >
+    <img src="assets/images/home.svg" />
+    <p>Home</p>
+  </div>
+  <div class="add-btn-holder" routerLink="task/add/0">
+    <img src="assets/images/add-btn.svg" />
+  </div>
+  <div
+    class="btn-holder"
+    [ngClass]="{ active: active === 'tasks' }"
+    routerLink="tasks"
+    (click)="setActive('tasks')"
+  >
+    <img src="assets/images/tasks.svg" />
+    <p>Tasks</p>
+  </div>
+</nav>

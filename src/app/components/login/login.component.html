@@ -1,0 +1,28 @@
+<section>
+  <h1>Login</h1>
+  <span class="success-msg" *ngIf="successMsg">{{successMsg}}</span>
+  <span class="err-msg" *ngIf="errMsg">{{errMsg}}</span>
+  <form [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+    <span class="error-msg"></span>
+    <input type="text" placeholder="Email" formControlName="email" />
+    <span
+      class="error-msg"
+      *ngIf="simplifier('email').invalid && simplifier('email').touched"
+    >
+      <span>Email is required</span>
+    </span>
+    <input type="password" placeholder="Password" formControlName="password" />
+    <span
+      class="error-msg"
+      *ngIf="simplifier('password').invalid && simplifier('password').touched"
+    >
+      Password is required
+    </span>
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+  </form>
+
+  <p>
+    Don't have an account yet ?
+    <a routerLink="/signup">Sign up</a>
+  </p>
+</section>

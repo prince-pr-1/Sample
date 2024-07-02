@@ -1,0 +1,24 @@
+<div class="task-item">
+  <div class="date">
+    <b>{{ task.taskDate | date }}</b>
+    <p class="updated">Updated on {{ task.updatedDate | date }}</p>
+  </div>
+  <div class="tsk-hd">
+    <h3>{{ task.task | titlecase }}</h3>
+    <div class="complt">
+      <img src="assets/images/complete.svg" (click)="handleComplete()" />
+    </div>
+  </div>
+  <div class="actions">
+    <img src="assets/images/edit.svg" (click)="handleEdit()" />
+    <img src="assets/images/copy.svg" (click)="handleCopy()" />
+    <img src="assets/images/delete.svg" (click)="handleDelete()" />
+    <div class="star">
+      @if (!priority) {
+      <img src="assets/images/star.svg" (click)="handleStar(true)" />
+      } @else {
+      <img src="assets/images/star-fill.svg" (click)="handleStar(false)" />
+      }
+    </div>
+  </div>
+</div>

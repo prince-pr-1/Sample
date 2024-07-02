@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  padding: 20px;
+  background: #2e435f;
+  justify-content: space-around;
+}
+
+.btn-holder,
+.add-btn-holder {
+  font-size: 12px;
+  font-weight: bold;
+  color: #86b3f7;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-holder {
+  filter: grayscale(1);
+  width: 30px;
+}
+.add-btn-holder {
+  width: 45px;
+}
+
+.btn-holder.active {
+  filter: grayscale(0);
+}
+
+.btn-holder:hover {
+  filter: grayscale(0);
+}
+
+img {
+  width: 100%;
+}

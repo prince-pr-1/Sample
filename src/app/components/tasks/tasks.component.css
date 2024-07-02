@@ -1,0 +1,141 @@
+.filter,
+section,
+.task,
+.task-card,
+.dates,
+.lf,
+.rt,
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section {
+  gap: 10px;
+  padding: 10px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.title h1 {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.tasks {
+  color: #fff;
+}
+
+.tasks h2 {
+  font-size: 1.2rem;
+}
+
+.filter {
+  gap: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+
+.filter select,
+.filter button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.filter select {
+  background: #c2daff;
+  border: none;
+}
+
+.filter button {
+  border: 2px solid #86b3f7;
+  color: #86b3f7;
+  background: none;
+  font-weight: bold;
+}
+
+.filter button:last-child {
+  background: #86b3f7;
+  color: darkblue;
+}
+
+.filter button:hover {
+  box-shadow: 0 0 10px #86b3f7;
+}
+
+.tasks {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.task-card {
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 6px;
+  background: #43546d;
+  justify-content: space-between;
+}
+
+.lf {
+  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dates {
+  gap: 10px;
+  opacity: 0.6;
+  justify-content: flex-start;
+}
+
+.date {
+  gap: 6px;
+}
+
+.rt {
+  gap: 10px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.tasks-tb {
+  width: 100%;
+}
+
+.tasks-tb th,
+.tasks-tb td {
+  padding: 10px;
+  text-align: left;
+}
+
+.notasks {
+  width: 100%;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.red {
+  color: #ffa6d7;
+}
+
+.green {
+  color: #70e770;
+}
+
+@media only screen and (max-width: 800px) {
+  .tasks-tb {
+    border-collapse: collapse;
+  }
+  .tasks-tb th,
+  .tasks-tb td {
+    border: 1px solid #fff;
+    padding: 10px 6px;
+    font-size: 0.9rem;
+  }
+  .date {
+    font-size: 0.8rem;
+  }
+}

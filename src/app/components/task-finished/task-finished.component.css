@@ -1,0 +1,38 @@
+.finished-task,
+.finished-action,
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.finished-task {
+  gap: 40px;
+  width: 100%;
+  max-width: 800px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #2f3b4d;
+  justify-content: space-between;
+}
+
+.title {
+  gap: 10px;
+  color: #86b3f7;
+  opacity: 0.6;
+}
+
+.finished-action {
+  gap: 10px;
+  color: #fff;
+}
+
+.finished-action img {
+  width: 40px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .finished-task {
+    max-width: unset;
+  }
+}

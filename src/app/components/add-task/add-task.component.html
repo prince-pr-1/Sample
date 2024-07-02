@@ -1,0 +1,33 @@
+<section>
+  <h1>
+    {{ mode === "add" ? "Add" : mode === "copy" ? "Duplicate" : "Edit" }} Task
+  </h1>
+  <form #taskForm="ngForm" (ngSubmit)="handleAdd(mode)">
+    <input
+      type="text"
+      placeholder="Task"
+      name="taskName"
+      [(ngModel)]="task.task"
+      #taskName="ngModel"
+      required
+    />
+    <span class="error-msg" *ngIf="taskName.invalid && taskName.touched"
+      >Task is required</span
+    >
+    <label for="date">To be done on</label>
+    <input
+      type="date"
+      id="date"
+      name="taskDate"
+      [(ngModel)]="task.taskDate"
+      #taskDate="ngModel"
+      required
+    />
+    <span class="error-msg" *ngIf="taskDate.invalid && taskDate.touched"
+      >Date is required</span
+    >
+    <button type="submit" [disabled]="taskForm.invalid">
+      {{ mode === "add" ? "Add" : mode === "copy" ? "Create Copy" : "Edit" }}
+    </button>
+  </form>
+</section>

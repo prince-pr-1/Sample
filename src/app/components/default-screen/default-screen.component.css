@@ -1,0 +1,67 @@
+/* component color :  90E0EF */
+
+section,
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  gap: 20px;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 1px;
+  flex-direction: column;
+  user-select: none;
+}
+
+h1 {
+  color: #ac44cc;
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+img {
+  max-width: 450px;
+  pointer-events: none;
+}
+
+.tagline {
+  font-size: 1.2rem;
+}
+
+.buttons {
+  gap: 10px;
+  width: 100%;
+  padding: 20px 0;
+  max-width: 300px;
+  flex-direction: column;
+}
+
+button {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #994cb1;
+  background: none;
+  border: 2px solid #994cb1;
+}
+
+button:last-child {
+  color: #000;
+  background: #994cb1;
+}
+
+a {
+  font-size: 0.8rem;
+  color: #394350;
+  text-decoration: underline;
+}
+
+a:last-child{
+  text-decoration: none;
+}

@@ -1,0 +1,92 @@
+<section>
+  <h1>Sign up</h1>
+  <form #signUpForm="ngForm" (ngSubmit)="handleSubmit()">
+    <input
+      type="text"
+      placeholder="Full name"
+      name="name"
+      [(ngModel)]="user.name"
+      #name="ngModel"
+      required
+    />
+
+    <span *ngIf="name.invalid && name.touched" class="error-msg">
+      <ng-container *ngIf="name.errors?.['required']"
+        >Please enter your name</ng-container
+      >
+    </span>
+
+    <input
+      type="text"
+      placeholder="Email"
+      name="email"
+      [(ngModel)]="user.email"
+      #email="ngModel"
+      required
+      [pattern]="emailPattern"
+      (keyup)="handleEmail()"
+    />
+
+    <span
+      *ngIf="(email.invalid || emailExists) && email.touched"
+      class="error-msg"
+    >
+      <ng-container *ngIf="email.errors?.['required']"
+        >Email is required</ng-container
+      >
+      <ng-container *ngIf="email.errors?.['pattern']"
+        >Only gmail & yahoo are supported</ng-container
+      >
+      <ng-container *ngIf="emailExists && !email.errors"
+        >Email already exists in our database</ng-container
+      >
+    </span>
+
+    <input
+      type="password"
+      placeholder="Password"
+      name="password"
+      [(ngModel)]="user.password"
+      #password="ngModel"
+      required
+      (keyup)="handlePass()"
+    />
+
+    <span *ngIf="password.invalid && password.touched" class="error-msg">
+      <ng-container *ngIf="password.errors?.['required']"
+        >Password is required</ng-container
+      >
+    </span>
+
+    <input
+      type="password"
+      placeholder="Confirm password"
+      name="confirmPassword"
+      [(ngModel)]="confirmPassword"
+      #cPass="ngModel"
+      required
+      (keyup)="handlePass()"
+    />
+
+    <span
+      *ngIf="(cPass.invalid || passNotMatch) && cPass.touched"
+      class="error-msg"
+    >
+      <ng-container *ngIf="cPass.errors?.['required']"
+        >Please re-enter the password</ng-container
+      >
+      <ng-container *ngIf="passNotMatch && !cPass.errors">Passwords don't match</ng-container>
+    </span>
+
+    <button
+      type="submit"
+      [disabled]="signUpForm.invalid || passNotMatch || emailExists"
+    >
+      Sign up
+    </button>
+  </form>
+  <p>
+    Already have an account ?
+    <a routerLink="/login">Login</a>
+  </p>
+</section>

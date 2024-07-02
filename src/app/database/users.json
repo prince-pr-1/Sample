@@ -1,0 +1,126 @@
+{
+  "users": [
+    {
+      "id": "5ce1",
+      "name": "ab c",
+      "email": "abc@123",
+      "password": "123",
+      "tasks": [
+        {
+          "task": "Task of buying some chocolates from outside",
+          "taskDate": "2024-05-11",
+          "updatedDate": "2024-06-10",
+          "status": "pending",
+          "important": false
+        },
+        {
+          "task": "Buy flowers from alice",
+          "taskDate": "2024-06-12",
+          "updatedDate": "2024-06-11",
+          "status": "completed",
+          "important": false
+        },
+        {
+          "task": "Appointment scheduled at parkhill avenue",
+          "taskDate": "2024-06-11",
+          "updatedDate": "2024-06-11",
+          "status": "pending",
+          "important": false
+        },
+        {
+          "task": "Meeting with Dr.Tom",
+          "taskDate": "2024-06-13",
+          "updatedDate": "2024-06-11",
+          "status": "pending",
+          "important": false
+        },
+        {
+          "task": "Pickup Jaison from the airport",
+          "taskDate": "2024-06-10",
+          "updatedDate": "2024-06-11",
+          "status": "pending",
+          "important": false
+        }
+      ]
+    },
+    {
+      "id": "34f6",
+      "name": "ab cd",
+      "email": "abcd@123",
+      "password": "1234",
+      "tasks": [
+        {
+          "task": "Pickup worker from warehouse",
+          "taskDate": "2024-06-10",
+          "updatedDate": "2024-06-11",
+          "status": "pending",
+          "important": false
+        },
+        {
+          "task": "Collect plants from the park",
+          "taskDate": "2024-06-10",
+          "updatedDate": "2024-06-11",
+          "status": "pending",
+          "important": false
+        },
+        {
+          "task": "Collect plants from the park",
+          "taskDate": "2024-06-10",
+          "updatedDate": "2024-06-11",
+          "status": "pending",
+          "important": false
+        },
+        {
+          "task": "Buy flowers from nearest store",
+          "taskDate": "2024-06-13",
+          "updatedDate": "2024-06-13",
+          "status": "pending",
+          "important": false
+        }
+      ]
+    },
+    {
+      "id": "de78",
+      "name": "random name",
+      "email": "abc@gmail.com",
+      "password": "123",
+      "tasks": [
+        {
+          "task": "Read a chapter of a book",
+          "taskDate": "2024-06-13",
+          "updatedDate": "2024-06-13",
+          "status": "completed",
+          "important": false
+        },
+        {
+          "task": "water the plants",
+          "taskDate": "2024-06-06",
+          "updatedDate": "2024-06-13",
+          "status": "pending",
+          "important": false
+        },
+        {
+          "task": "Go for a 10-minute walk",
+          "taskDate": "2024-06-06",
+          "updatedDate": "2024-06-13",
+          "status": "pending",
+          "important": false
+        },
+        {
+          "task": "Reply to emails",
+          "taskDate": "2024-06-06",
+          "updatedDate": "2024-06-13",
+          "status": "pending",
+          "important": false
+        },
+        {
+          "task": "Organize the desk",
+          "taskDate": "2024-06-13",
+          "updatedDate": "2024-06-13",
+          "status": "completed",
+          "important": false
+        }
+      ]
+    }
+  ]
+}
